@@ -30,4 +30,4 @@ services:
     links:
       - app
     ports:
-      - 8989:8989
+      - 80:80
