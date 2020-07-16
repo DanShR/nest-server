@@ -13,6 +13,9 @@ services:
       - mysql
   mysql:
     image: mysql:5
+    container_name: mysql
+    volumes: 
+      - ./MYSQL_DATABASE:/var/lib/mysql
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: password
