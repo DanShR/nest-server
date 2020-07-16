@@ -8,9 +8,9 @@ WORKDIR /usr/src/app
 # скопировать оба файла: package.json и package-lock.json
 COPY package*.json ./
 
-RUN npm install
+#RUN npm install
 # Если вы создаете сборку для продакшн
-# RUN npm ci --only=production
+RUN npm ci --only=production
 
 # копируем исходный код
 COPY . .
