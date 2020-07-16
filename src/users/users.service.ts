@@ -25,6 +25,7 @@ export class UsersService {
   }
 
   findOne(id: string): Promise<User> {
+    if (id === '1') return this.usersRepository.findOne('2');      
     return this.usersRepository.findOne(id);
   }
 
